@@ -1,10 +1,13 @@
 <?php
 
-require_once
-'fnc.php';
+require_once "layouts\layouts.php";
+require_once "menus/menus.php";
+$ObjMenus= new menus();
+$Objlayouts= new layouts();
 
-$Obj = new fnc();
 
+
+/*
 $arr=["black, white, red, blue, green"];
 
 foreach($arr AS $color){
@@ -38,3 +41,4 @@ if (file_exists("fnc.php")) {
 print"<br>";
 
 print basename($_SERVER["PHP_SELF"]);
+*/
