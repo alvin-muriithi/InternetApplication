@@ -1,9 +1,39 @@
 <?php
 
+require_once "layouts/layouts.php";
+$ObjLayouts = new layouts();
+
+require_once "menus/menus.php";
+$ObjMenus = new menus();
+//Class Auto Load 
+
+function classAutoLoad($classname){
+    $directories=["contents","layout","menus"];
+
+    foreach($directories AS $dir){
+        $filename = dirname(__FILE__) . DIRECTORY_SEPARATOR . $dir . DIRECTORY_SEPARATOR . $classname . ".php";
+        if(file_exists($filename) AND is_readable($filename)){
+            require_once $filename;
+        }
+    }
+}
+
+spl_autoload_register('classAutoLoad');
+
+//Creating instances of all classes
+    $Objlayouts= new layouts();
+    $ObjMenus= new menus();
+    $ObjHeadings= new headings();
+
+
+//Similar method of calling class as class auto load
+/*
 require_once "layouts\layouts.php";
+$Objlayouts= new layouts();
 require_once "menus/menus.php";
 $ObjMenus= new menus();
-$Objlayouts= new layouts();
+require_once "contents\headings.php";
+$ObjHeadings= new headings();
 
 
 

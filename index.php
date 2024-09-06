@@ -1,10 +1,10 @@
 <?php
 require "load.php";
-$Objlayouts->headeing();
+$Objlayouts->heading();
 $ObjMenus->main_menu();
+$ObjHeadings->main_banner();
+$Objlayouts->footer();
 
-?>
-    <h1>This is my first web page</h1>
 
 
 	

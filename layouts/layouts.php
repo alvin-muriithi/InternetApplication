@@ -1,13 +1,14 @@
 <?php
 class layouts{
-    public function headeing (){
+    public function heading (){
         ?>
-        <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Web Page</title>
+    <link rel="stylesheet" href="css\style.css"/>
 </head>
 <body> 
     <?php
@@ -15,7 +16,7 @@ class layouts{
     }
     public function footer(){
         ?>
-        <div>
+        <div class="footer">
             Copyright &copy; ICS  <?php print date('Y');?>
         </div>
     
@@ -23,8 +24,5 @@ class layouts{
     </html>
 
     <?php
-    
-
-
     }
 }
