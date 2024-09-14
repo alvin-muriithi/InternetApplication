@@ -1,10 +1,18 @@
 <?php
 
+require_once "user_details.php";
+$Obj = new user_details();
+
 require_once "layouts/layouts.php";
 $ObjLayouts = new layouts();
 
+require_once"layouts\contents.php";
+$ObjCont= new contents();
+
 require_once "menus/menus.php";
 $ObjMenus = new menus();
+
+
 //Class Auto Load 
 
 function classAutoLoad($classname){
@@ -24,6 +32,14 @@ spl_autoload_register('classAutoLoad');
     $Objlayouts= new layouts();
     $ObjMenus= new menus();
     $ObjHeadings= new headings();
+    $ObjCont=new contents();
+
+    
+    require "includes/constants.php";
+    require "includes/dbconnection.php";
+
+    $conn= new dbconnection(DBTYPE, HOSTNAME, DBPORT,
+     HOSTUSER, HOSTPASSWORD, DBNAME);
 
 
 //Similar method of calling class as class auto load
