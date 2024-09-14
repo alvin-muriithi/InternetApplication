@@ -1,9 +1,9 @@
 <?php
 
 //Creating constants
-define('DBTYPE', 'MySQLi');
+define('DBTYPE', 'PDO');
 define('HOSTNAME', 'localhost');
-define('DBPORT','3307');
+define('DBPORT','3306');
 define('HOSTUSER', 'root');
 define('HOSTPASSWORD', 'Alvinmuriithi!8');
 define('DBNAME', 'internetapplication');
